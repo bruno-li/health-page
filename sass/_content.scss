@@ -1,0 +1,114 @@
+.main-container{
+    width: 60%;
+    max-width: 850px;
+    margin: 90px auto;
+    // MEDIA QUERIES
+    @include respond(tab-port) {
+        width: 80%;
+    } 
+    @include respond(small-phone) {
+        margin: 77px auto;
+    } 
+}
+// HEADING
+.title{
+    &__list-link{ 
+        display: flex;
+        list-style: none;
+        margin-bottom: 2.2rem;
+        // MEDIA QUERIES
+        @include respond(small-phone) {
+            margin-bottom: 1rem;
+        } 
+        &__text{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 900;
+            margin: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-primary;
+            &:hover{
+                text-decoration: underline;
+            }
+            // MEDIA QUERIES
+            @include respond(small-phone) {
+                font-size: 10px;
+            }     
+        }
+    }
+    &__header{
+        &__heading{
+            font-size: 48px;
+            line-height: 52px;
+            font-weight: 700;
+            // MEDIA QUERIES
+            @include respond(phone) {
+                font-size: 38px;
+                line-height: 45px;
+            }
+            @include respond(small-phone) {
+                font-size: 28px;
+                line-height: 35px;
+            } 
+        }
+        &__paragraph{
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 10px;
+            color: $color-primary;
+            // MEDIA QUERIES
+            @include respond(small-phone) {
+                font-size: 14px;
+                line-height: 20px;
+            } 
+        }
+    }
+
+    &__author{
+        font-size: 14px;
+        line-height: 20px;
+        margin: 1rem 0;
+
+        &__name{
+            font-weight: 700;
+            color: $color-primary;
+            // MEDIA QUERIES
+            @include respond(small-phone) {
+                font-size: 12px;
+            } 
+        }
+    }
+}
+// MAIN CONTENT BODY
+.main-content{
+    &__photo-container{
+        &__img{
+            width: 100%
+        }
+    }
+
+    &__paragraph{
+        font-family: "Lora";
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 28px;
+        color: $color-primary;
+        // MEDIA QUERIES
+        @include respond(small-phone) {
+            font-size: 14px;
+        } 
+    }
+    &__link{
+        margin-top: 28px;
+        &__text{
+            font-size: 18px;
+            line-height: 28px;
+            color: $color-primary;
+            // MEDIA QUERIES
+            @include respond(small-phone) {
+                font-size: 14px;
+            } 
+        }
+    }
+}
