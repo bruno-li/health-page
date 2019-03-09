@@ -12,6 +12,7 @@
 }
 // HEADING
 .title{
+    font-family: "Source Sans Pro",sans-serif;
     &__list-link{ 
         display: flex;
         list-style: none;
@@ -20,24 +21,36 @@
         @include respond(small-phone) {
             margin-bottom: 1rem;
         } 
-        &__text{
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 900;
-            margin: 10px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $color-primary;
-            &:hover{
-                text-decoration: underline;
+        &__item{
+            display: flex;
+            align-items: center;
+            &__text{
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                display: flex;
+                margin: 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-primary;
+                &:hover{
+                    color: rgba(1, 155, 217, 0.3);
+                }
+                // MEDIA QUERIES
+                @include respond(small-phone) {
+                    font-size: 10px;
+                }     
             }
-            // MEDIA QUERIES
-            @include respond(small-phone) {
-                font-size: 10px;
-            }     
+            &__chevron{
+                width: 11px;
+                height: 22px;
+            }
         }
+  
     }
     &__header{
+        font-family: "Roboto",sans-serif;
         &__heading{
             font-size: 48px;
             line-height: 52px;
@@ -53,10 +66,12 @@
             } 
         }
         &__paragraph{
+            font-family: "Source Sans Pro",sans-serif;
             font-size: 18px;
+            font-style: italic;
             line-height: 28px;
             margin-top: 10px;
-            color: $color-primary;
+            color: #282f2f;
             // MEDIA QUERIES
             @include respond(small-phone) {
                 font-size: 14px;
@@ -66,12 +81,15 @@
     }
 
     &__author{
-        font-size: 14px;
+        font-family: "Source Sans Pro",sans-serif;
+        font-size: 15px;
         line-height: 20px;
         margin: 1rem 0;
 
         &__name{
             font-weight: 700;
+            letter-spacing: .5px;
+            text-decoration: none;
             color: $color-primary;
             // MEDIA QUERIES
             @include respond(small-phone) {
@@ -89,7 +107,7 @@
     }
 
     &__paragraph{
-        font-family: "Lora";
+        font-family: "Source Sans Pro",sans-serif;
         font-size: 18px;
         line-height: 28px;
         margin-top: 28px;
@@ -99,16 +117,29 @@
             font-size: 14px;
         } 
     }
-    &__link{
-        margin-top: 28px;
-        &__text{
-            font-size: 18px;
-            line-height: 28px;
-            color: $color-primary;
-            // MEDIA QUERIES
-            @include respond(small-phone) {
-                font-size: 14px;
-            } 
+
+    &__sub-header{
+        &__heading{
+            font-family: "Roboto",sans-serif;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: 1px;
+            margin-top: 2rem;
         }
     }
+
+    &__figure{
+        margin-top: 2rem;
+        &__img{
+            width: 100%;
+        }
+        &__caption{
+            margin-top: 1rem;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgba(0, 0, 0, 0.65);
+            
+        }
+    }
+
 }

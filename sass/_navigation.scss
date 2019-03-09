@@ -5,14 +5,15 @@
     left: 0;
     right: 0;
     top: 0;
-    height: 60px;
+    height: 65px;
     justify-content: space-between;
     align-items: center;
     background: #fff;
+    font-family: "Source Sans Pro",sans-serif;
     color:$color-primary;
     box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7); 
 
-    // Navigation left
+    // NAV LEFT
     &__left{
         display: flex;
         align-items: center;
@@ -38,13 +39,13 @@
         }
         .navbar__link {
             margin-bottom: 5px;
-
             &-text__active-left{
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: .5px;
                 text-decoration: none;
                 color: $color-primary;
                 text-transform: uppercase;
-                font-size: 14px;
-                line-height: 20px;
                 margin-right: 1.2em;
                 // MEDIA QUERIES
                 @include respond(tab-port) {
@@ -54,15 +55,12 @@
         }
         .navbar__site-logo{
             &__img {
-                width: 220px;
-                @include respond(small-phone) {
-                    width: 185px;
-                } 
+                width: 100px;
             }
         }
     }
     
-    // Navigation right
+    // NAV RIGHT
     &__right{
         display: flex;
         align-items: center;
@@ -86,41 +84,19 @@
         .navbar__link{
             
             margin-right: .4rem;
-            font-size: 14px;
+            font-size: 15px;
+            letter-spacing: .5px;
             line-height: 20px;
-
             &__text{
                 color: $color-primary;
                 text-decoration: none;
-            }
-            &__text-border{
-                color: $color-primary;
-                text-decoration: none;
                 padding: 0 14px;
-                border-right: 1px solid #D7D7D9;
                 border-left: 1px solid #D7D7D9;
             }
             // MEDIA QUERIES
             @include respond(phone) {
                 display: none;
             } 
-          
-            &__text--active-right {
-                font-size: 12px;
-                line-height: 12px;
-                font-weight: 700;
-                color: $color-primary;
-                text-transform: uppercase;
-                text-decoration: none;
-                margin-left: 1.2rem;
-                // MEDIA QUERIES
-               @include respond(phone) {
-                margin-right: 2rem;
-              }    
-              @include respond(small-phone) {
-               display: none;
-              }   
-            }
         }
     }
 }
