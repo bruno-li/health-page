@@ -4,9 +4,11 @@
     margin: 90px auto;
     // MEDIA QUERIES
     @include respond(tab-port) {
-        width: 80%;
+        width: 85%;
     } 
     @include respond(small-phone) {
+        // border: 2px solid red;
+        width: 92%;
         margin: 77px auto;
     } 
 }
@@ -16,7 +18,7 @@
     &__list-link{ 
         display: flex;
         list-style: none;
-        margin-bottom: 2.2rem;
+        margin-bottom: 1.3rem;
         // MEDIA QUERIES
         @include respond(small-phone) {
             margin-bottom: 1rem;
@@ -36,11 +38,7 @@
                 color: $color-primary;
                 &:hover{
                     color: rgba(1, 155, 217, 0.3);
-                }
-                // MEDIA QUERIES
-                @include respond(small-phone) {
-                    font-size: 10px;
-                }     
+                }  
             }
             &__chevron{
                 width: 11px;
@@ -49,6 +47,7 @@
         }
   
     }
+    // TITLE
     &__header{
         font-family: "Roboto",sans-serif;
         &__heading{
@@ -79,7 +78,7 @@
             } 
         }
     }
-
+    // AUTHOR NAME
     &__author{
         font-family: "Source Sans Pro",sans-serif;
         font-size: 15px;
@@ -105,7 +104,7 @@
             width: 100%
         }
     }
-
+    // PARAGRAPHS
     &__paragraph{
         font-family: "Source Sans Pro",sans-serif;
         font-size: 18px;
@@ -117,7 +116,7 @@
             font-size: 14px;
         } 
     }
-
+    // CONTENT HEADING
     &__sub-header{
         &__heading{
             font-family: "Roboto",sans-serif;
