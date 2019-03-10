@@ -421,7 +421,7 @@ body {
     font-family: 'Roboto',sans-serif;
     font-size: 15px;
     line-height: 16px;
-    width: 70%;
+    width: 90%;
     color: rgba(0, 0, 0, 0.65);
     /* Custom, iPhone Retina */
     /* Extra Small Devices, Phones */
@@ -442,6 +442,7 @@ body {
         display: block;
         text-align: left;
         margin-left: 1rem;
+        width: 100%;
         /* Custom, iPhone Retina */
         /* Extra Small Devices, Phones */
         /* Small Devices, Tablets */
